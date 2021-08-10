@@ -1,0 +1,82 @@
+.toast{
+  visibility: hidden;
+  min-width: 343px;
+  text-align: left;
+  position: fixed;
+  padding: 9px 9px 20px 20px;
+  z-index: 5;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #557da526;
+  border-radius: 5px;
+  top: 90px;
+  right: 70px;
+
+  &_close{
+    height: 15px;
+    float: right;
+    cursor: pointer;
+  }
+
+  &_title {
+    font-size: 24px;
+    font-weight: 500;
+    color: #43afff;
+    margin-bottom: 11px;
+  }
+
+  &_message {
+    text-align: left;
+    font-size: 17px;
+    color: #303f60;
+  }
+}
+
+.toast.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    right: 0;
+    opacity: 0;
+  }
+  to {
+    right: 70px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    right: 70px;
+    opacity: 1;
+  }
+  to {
+    right: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadein {
+  from {
+    right: 0;
+    opacity: 0;
+  }
+  to {
+    right: 70px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    right: 70px;
+    opacity: 1;
+  }
+  to {
+    right: 0;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,52 @@
+@mixin pageWrapper {
+  position: absolute;
+  top: 122px;
+  padding: 0 120px;
+  width: 100%;
+}
+@mixin title {
+  font-size: 22px;
+  font-weight: 500;
+  color: #ffffff;
+}
+.recruiterPage {
+  @include pageWrapper;
+
+  &_title {
+    @include title;
+  }
+
+  &_postedJob {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &_nodataContainer {
+    position: relative;
+    transform: translateY(100%);
+  }
+}
+
+.modalNoDataChild {
+  position: relative;
+  transform: translateY(100%);
+}
+
+.modalDataChild {
+  grid-column-gap: 9em;
+  display: inline-grid;
+  grid-template-columns: auto auto;
+}
+
+.candidatePage {
+  @include pageWrapper;
+  &_title {
+    @include title;
+  }
+  &_availableJob {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

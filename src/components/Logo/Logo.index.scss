@@ -1,0 +1,17 @@
+.logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 34px;
+  margin: 0;
+  &_job {
+    color: #43afff;
+  }
+}
+
+.logo.small {
+  font-size: 26px;
+}
+
+.logo.large {
+  font-size: 60px;
+}

@@ -1,0 +1,23 @@
+.Loader-wrap {
+  height: 100%;
+  width: 100%;
+  z-index: 15;
+  position: fixed;
+  top: 50%;
+  left: 48%;
+  .donutSpinner {
+    display: inline-block;
+    border: 7px solid hsl(222, 100%, 95%);
+    border-left-color: hsl(243, 80%, 62%);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    animation: donut-spin 1.2s linear infinite;
+  }
+
+  @keyframes donut-spin {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+}

@@ -1,0 +1,149 @@
+@mixin cardStyle {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #557da526;
+  border-radius: 5px;
+}
+@mixin cardBodyStyle {
+  font-size: 14px;
+  color: #303f60;
+}
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.infoCard {
+  @include cardStyle;
+  padding: 24px 20px 30px 20px;
+
+  &_head {
+    max-width: 172px;
+    font-size: 22px;
+    font-weight: 500;
+    color: #43afff;
+    text-transform: capitalize;
+    margin-bottom: 29px;
+  }
+
+  &_body {
+    @include cardBodyStyle;
+  }
+}
+
+.actionCard {
+  @include cardStyle;
+  @include flex;
+  flex-direction: column;
+  align-items: stretch;
+  max-width: 260px;
+  min-width: 260px;
+  padding: 15px;
+
+  &.clikableCard {
+    cursor: pointer;
+  }
+
+  &_head {
+    font-size: 17px;
+    font-weight: 500;
+    color: #303f60;
+    margin-bottom: 10px;
+  }
+
+  &_body {
+    @include cardBodyStyle;
+    opacity: 0.8;
+    overflow: hidden;
+  }
+
+  &_footer {
+    @include flex;
+    margin-top: 15px;
+    overflow: hidden;
+
+    &_message {
+      visibility: hidden;
+      font-size: 12px;
+      color: #ff0000;
+      opacity: 0.8;
+      text-align: end;
+    }
+
+    &_location {
+      @include flex;
+      > img {
+        height: 15px;
+      }
+      &_name {
+        font-size: 14px;
+        color: #303f60;
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.avatarCard {
+  @include cardStyle;
+  max-width: 302px;
+  padding: 15px;
+  border: 1px solid #303F6080;
+
+  &_head {
+    display: flex;
+    align-items: center;
+
+    &_avatar {
+      width: 50px;
+      height: 50px;
+      background: #d9efff 0% 0% no-repeat padding-box;
+      font-size: 20px;
+      color: #303f60;
+      opacity: 0.8;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 20px;
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      align-content: space-between;
+      overflow: hidden;
+      max-width: 80%;
+
+      &_name {
+        font-size: 15px;
+        font-weight: 500;
+        color: #303f60;
+        margin-bottom: 10px;
+      }
+
+      &_email {
+        font-size: 15px;
+        color: #303f60;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &_body {
+    margin-top: 25px;
+
+    &_title {
+      font-size: 13px;
+      font-weight: 500;
+      color: #303f60;
+      margin: 0 0 5px 0;
+    }
+
+    &_description {
+      font-size: 15px;
+      color: #303f60;
+      opacity: 0.8;
+    }
+  }
+}

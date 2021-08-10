@@ -1,0 +1,44 @@
+.button {
+  height: 46px;
+  width: 148px;
+  border: 1px solid #43afff;
+  background: #43afff33 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: inherit;
+  font-weight: bold;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:focus {
+    outline: none;
+  }
+
+  &_icon {
+    height: 23px;
+    margin-right: 10px;
+  }
+}
+
+.button.primary {
+  background: #43afff 0% 0% no-repeat padding-box;
+  border: 1px solid #43afff;
+}
+
+.button.secondary {
+  background: #e8e8e833 0% 0% no-repeat padding-box;
+  border: 1px solid #c6c6c6;
+  color: #303f60;
+}
+
+.button.action {
+  width: 125px;
+  height: 32px;
+  font-size: 12px;
+  border: 1px solid #43afff33;
+  color: #303f60;
+  text-transform: capitalize;
+}

@@ -1,0 +1,17 @@
+.nodata {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &_image {
+    width: 106px;
+  }
+
+  &_info {
+    font-size: 20px;
+    color: #303f60;
+    opacity: 0.8;
+    margin: 19px 0 40px 0;
+  }
+}
